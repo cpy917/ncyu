@@ -1,0 +1,56 @@
+﻿.flip-card {
+    background-color: transparent;
+    width: 100%;
+    perspective: 1000px;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+    .flip-card:hover {
+        transform: scale(1); /* 滑鼠靠近時放大 */
+    }
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* 正方形比例 */
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background-color: #fff;
+}
+
+.flip-card-back {
+    background-color: #8d7c8f;
+    transform: rotateY(180deg);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.flip-card-front img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block; /* 消除 inline 元素的空隙 */
+}
