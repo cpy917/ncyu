@@ -1,0 +1,331 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap');
+
+body {
+    background-image: url(../images/back.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    color: white;
+    background-attachment: fixed;
+    font-family: "LXGW WenKai TC", cursive;
+    padding-top: 55px;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+}
+
+.navbar-light .navbar-brand {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
+    .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+        background-color: #FFFFFF;
+        color: rgba(0,0,0,.9);
+    }
+
+.navbar-light .navbar-toggler {
+    color: #fff;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color: #d984e4;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #d984e4;
+}
+
+.box {
+    background-color: rgba(50,50,50,0.6);
+}
+
+.myphoto {
+    width: 160px;
+}
+.carousel-caption {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 55px 15px;
+    letter-spacing: 10px;
+    color: white;
+    background: linear-gradient(transparent 0%,black 100%);
+    width: 100%;
+    padding-right: 30px;
+    padding-bottom: 35px;
+}
+
+.timeline-wrapper {
+    position: relative;
+    padding: 40px 0;
+}
+
+    .timeline-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background-color: #dee2e6;
+        z-index: 1;
+    }
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12px;
+        height: 12px;
+        background-color: #6c757d;
+        border: 2px solid white;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px #ced4da;
+        transition: background-color 0.3s ease;
+        z-index: 3;
+    }
+
+    .timeline-item:hover::before {
+        background-color: #343a40;
+    }
+
+/* 卡片樣式通用 */
+
+.timeline-box {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    color: #212529;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    z-index: 2;
+}
+
+    .timeline-box:hover {
+        background-color: #f8f9fa;
+        border-left: 4px solid #6c757d;
+        padding-left: 24px;
+    }
+
+    .timeline-box h5 {
+        font-weight: 700;
+        color: #343a40;
+    }
+
+    .timeline-box h6 {
+        font-weight: 700;
+        color: #495057;
+        margin-bottom: 0.3rem;
+    }
+
+    .timeline-box ul {
+        padding-left: 1.2rem;
+        margin-bottom: 0;
+    }
+
+        .timeline-box ul li {
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+/* 左邊對齊的樣式 */
+.timeline-left .timeline-box {
+    border-left: none;
+    border-right: 4px solid transparent;
+    text-align: right;
+}
+
+    .timeline-left .timeline-box:hover {
+        background-color: #f8f9fa;
+        border-right: 4px solid #6c757d;
+        padding-right: 24px;
+    }
+
+    .timeline-left .timeline-box ul {
+        padding-right: 1.2rem;
+        padding-left: 0;
+        list-style-position: inside;
+    }
+
+        .timeline-left .timeline-box ul li {
+            text-align: right;
+        }
+
+/* RWD 手機模式：單邊排版、時間線靠左 */
+@media (max-width: 768px) {
+    .timeline-wrapper::before,
+    .timeline-item::before {
+        left: 16px;
+    }
+
+    .timeline-box {
+        width: calc(100% - 56px); /* 避免因 margin + padding 導致寬度破表 */
+        margin-left: 36px;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+
+        .timeline-box:hover {
+            border-left: 4px solid #6c757d;
+            padding-left: 24px;
+        }
+
+    .timeline-left .timeline-box {
+        text-align: left;
+        border-right: none;
+        padding-right: 0;
+    }
+
+        .timeline-left .timeline-box ul,
+        .timeline-left .timeline-box ul li {
+            text-align: left;
+            padding-left: 1.2rem;
+            padding-right: 0;
+        }
+}
+.clock-box {
+    background: rgba(147, 103, 228, 0.1);
+    border: 2px solid rgba(82, 71, 71, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(95, 85, 100, 0.6);
+    padding: 0.75rem 1rem;
+    max-width: 260px; 
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.tooltip-inner {
+    font-size: 1rem; 
+    padding: 10px 16px;
+    background-color: rgba(33, 37, 41, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: rgba(33, 37, 41, 0.95);
+}
+
+.badge[data-bs-toggle="tooltip"] {
+    background-color: #a582b5;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    padding: 6px 12px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+    .badge[data-bs-toggle="tooltip"]:hover {
+        transform: scale(1.05);
+        background-color: #916fa6;
+    }
+.luck-wrapper {
+    position: relative;
+    height: 80px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.luck {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0.4);
+    transition: transform 6s;
+    width: 30px;
+    height: 30px;
+}
+
+    .luck:hover {
+        transform: translateX(-50%) scale(0.6) rotate(720deg);
+    }
+
+.heart1, .heart2, .heart3, .heart4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform-origin: bottom center;
+}
+
+.heart1 {
+    transform: rotate(0deg) translateY(15px);
+}
+
+.heart2 {
+    transform: rotate(90deg) translateX(2px) translateY(21px);
+}
+
+.heart3 {
+    transform: rotate(180deg) translateX(8px) translateY(19px);
+}
+
+.heart4 {
+    transform: rotate(270deg) translateX(6px) translateY(13px);
+}
+
+.h1, .h2, .h3 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #869ca3;
+    border-radius: 50%;
+    transition: background 0.5s;
+}
+
+.h1 {
+    top: 1px;
+    left: 1px;
+}
+
+.h2 {
+    top: 1px;
+    left: 41px;
+}
+
+.h3 {
+    top: 21px;
+    left: 21px;
+    transform: rotate(45deg);
+    border-radius: 0;
+    color: #fff;
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* hover 變色 */
+.luck:hover .h1,
+.luck:hover .h2,
+.luck:hover .h3 {
+    background: #9886a3;
+}
+
+
+.luck:hover .h1,
+.luck:hover .h2,
+.luck:hover .h3 {
+    background: #9886a3;
+}

@@ -1,0 +1,76 @@
+﻿/* 技能*/
+.skill-list {
+    padding-left: 2rem; /* 約等於兩個 tab */
+}
+
+    .skill-list li {
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        padding: 8px 12px;
+    }
+
+        .skill-list li:hover {
+            background-color: #c6c6c6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(165, 130, 181, 0.1);
+        }
+
+        .skill-list li h5 {
+            transition: color 0.3s ease;
+        }
+
+        .skill-list li:hover h5 {
+            color: #242424;
+        }
+/* 興趣*/
+.interest-card {
+    display: inline-block;
+    background: #f8f9fa;
+    padding: 10px 20px;
+    margin: 6px;
+    border-radius: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.25s ease-in-out;
+    font-weight: 600;
+    color: #5a5a5a;
+    font-size: 1.5rem;
+    cursor: default;
+}
+
+    .interest-card:hover {
+        background: #727387;
+        color: #dac5e4;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+.interest-list {
+    padding-left: 2rem; /* 約等於兩個 tab */
+}
+/* TAG*/
+.tag-zone {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.tag-card {
+    position: absolute;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: grab;
+    font-weight: 500;
+    user-select: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .tag-card:active {
+        cursor: grabbing;
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    }

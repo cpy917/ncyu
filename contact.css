@@ -1,0 +1,64 @@
+﻿/* ICON*/
+.contact ul {
+    padding: 0%;
+    list-style: none;
+}
+
+.contact li {
+    display: inline-block;
+    padding: 40px 20px;
+    font-size: 30px;
+}
+
+.contact ul li a {
+    color: #fff;
+}
+.contact ul li a:hover {
+        color: #d984e4;
+ }
+/* 行程*/
+#orderTable {
+    background-color: rgba(164, 157, 204, 0.5) !important;
+    color: #ffff;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f9ff;
+}
+
+input#searchInput {
+    max-width: 350px;
+}
+
+.badge {
+    padding: 0.6em 0.9em;
+    font-size: 0.95em;
+    border-radius: 2rem;
+}
+
+    .badge.SC-completed {
+        background-color: #8ec484; /* 綠 */
+        color: white;
+    }
+
+    .badge.SC-processing {
+        background-color: #dea557; /* 黃 */
+        color: white;
+    }
+
+    .badge.SC-pending {
+        background-color: #ab5760; /* 紅 */
+        color: white;
+    }
+
+.text-success {
+    color: #8ec484 !important;
+}
+
+.text-warning {
+    color: #dea557 !important;
+}
+
+.text-danger {
+    color: #ab5760 !important;
+}
